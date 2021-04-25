@@ -5,6 +5,7 @@ export const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(true);
   return <AppContext.Provider value="hello">{children}</AppContext.Provider>;
 };
 // make sure use
