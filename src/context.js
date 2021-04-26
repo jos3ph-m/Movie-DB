@@ -10,6 +10,13 @@ const AppProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState(['predator']);
 
+  const fetchMovies = async (url) => {
+    setIsLoading(true);
+    try {
+      const response = await fetch(url);
+    } catch (error) {}
+  };
+
   useEffect(() => {
     fetchMovies(`${API_ENDPOINT}`);
   }, []);
