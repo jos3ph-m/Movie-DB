@@ -6,6 +6,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState({ show: false, msg: '' });
   return <AppContext.Provider value="hello">{children}</AppContext.Provider>;
 };
 // make sure use
