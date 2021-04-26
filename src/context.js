@@ -8,6 +8,8 @@ const AppProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState({ show: false, msg: '' });
   const [movies, setMovies] = useState([]);
+  const [query, setQuery] = useState(['predator']);
+
   return <AppContext.Provider value="hello">{children}</AppContext.Provider>;
 };
 // make sure use
