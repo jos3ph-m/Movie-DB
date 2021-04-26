@@ -10,6 +10,10 @@ const AppProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState(['predator']);
 
+  useEffect(() => {
+    fetchMovies(`${API_ENDPOINT}`);
+  }, []);
+
   return <AppContext.Provider value="hello">{children}</AppContext.Provider>;
 };
 // make sure use
