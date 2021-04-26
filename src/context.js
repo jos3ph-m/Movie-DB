@@ -14,7 +14,9 @@ const AppProvider = ({ children }) => {
     setIsLoading(true);
     try {
       const response = await fetch(url);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
