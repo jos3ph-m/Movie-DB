@@ -9,7 +9,13 @@ const Movies = () => {
   if (isLoading) {
     return <div className="loading"></div>;
   }
-  return <h2>movies component</h2>;
+  return (
+    <section className="movies">
+      {movies.map((movie) => {
+        return <h4>movie</h4>;
+      })}
+    </section>
+  );
 };
 
 export default Movies;
