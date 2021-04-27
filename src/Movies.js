@@ -15,7 +15,9 @@ const Movies = () => {
         const { imdbID: id, Poster: poster, Title: title, Year: year } = movie;
         return (
           <Link to={`/movies/${id}`} key={id} className="movie">
-            movie
+            <article>
+              <img src={poster} alt={title} />
+            </article>
           </Link>
         );
       })}
