@@ -11,9 +11,13 @@ const Movies = () => {
   }
   return (
     <section className="movies">
-      {movies.map((movie, index) => {
-        const { imdbID: id, Poster: poster };
-        return <h4 key={index}>movie</h4>;
+      {movies.map((movie) => {
+        const { imdbID: id, Poster: poster, Title: title, Year: year } = movie;
+        return (
+          <Link to={`/movies/${id}`} key={id} className="movie">
+            movie
+          </Link>
+        );
       })}
     </section>
   );
