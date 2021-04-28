@@ -11,6 +11,7 @@ const SearchForm = () => {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
+      {error.show}
     </form>
   );
 };
