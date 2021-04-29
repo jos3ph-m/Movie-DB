@@ -42,6 +42,11 @@ const SingleMovie = () => {
   return (
     <section className="single-movie">
       <img src={poster} alt={title} />
+      <div className="single-movie-info">
+        <h2>{title}</h2>
+        <p>{plot}</p>
+        <h4>{year}</h4>
+      </div>
     </section>
   );
 };
