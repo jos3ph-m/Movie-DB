@@ -14,7 +14,7 @@ const SingleMovie = () => {
   };
 
   useEffect(() => {
-    fetch();
+    fetch(API_ENDPOINT);
   }, [id]);
 
   return <h2>single movie</h2>;
