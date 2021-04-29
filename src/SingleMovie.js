@@ -12,6 +12,9 @@ const SingleMovie = () => {
     const response = await fetch(url);
     const data = await response.json();
     if (data.Response === 'False') {
+    } else {
+      setMovie(data);
+      setLoading(false);
     }
   };
 
