@@ -38,7 +38,7 @@ const SingleMovie = () => {
       </div>
     );
   }
-
+  const { Poster: poster, Title: title, Plot: plot, Year: year } = movie;
   return <h2>single movie</h2>;
 };
 
