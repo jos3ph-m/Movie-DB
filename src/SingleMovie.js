@@ -13,6 +13,10 @@ const SingleMovie = () => {
     const data = await response.json();
   };
 
+  useEffect(() => {
+    fetch();
+  }, [id]);
+
   return <h2>single movie</h2>;
 };
 
