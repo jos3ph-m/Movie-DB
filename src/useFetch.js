@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_API_KEY}`;
 
 const useFetch = (urlParams) => {
@@ -12,7 +12,7 @@ const useFetch = (urlParams) => {
       const response = await fetch(url);
       const data = await response.json();
       if (data.Response === 'True') {
-        setDovies(data.Search);
+        setData(data.Search);
         setError({ show: false, msg: '' });
       } else {
         setError({ show: true, msg: data.Error });
