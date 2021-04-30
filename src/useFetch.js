@@ -27,7 +27,7 @@ const useFetch = (urlParams) => {
     fetchMovies(`${API_ENDPOINT}${urlParams});
   }, [urlParams]);
 
-  return{isLoading, error, };
+  return {isLoading, error, data};
 };
 
 export default useFetch;
