@@ -24,10 +24,10 @@ const useFetch = (urlParams) => {
   };
 
   useEffect(() => {
-    fetchMovies(`${API_ENDPOINT}${urlParams});
+    fetchMovies(`${API_ENDPOINT}${urlParams}`);
   }, [urlParams]);
 
-  return {isLoading, error, data};
+  return { isLoading, error, data };
 };
 
 export default useFetch;
