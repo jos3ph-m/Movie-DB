@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_API_KEY}`;
 
-const useFetch = () => {
+const useFetch = (urlParams) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState({ show: false, msg: '' });
   const [movies, setMovies] = useState([]);
@@ -24,8 +24,8 @@ const useFetch = () => {
   };
 
   useEffect(() => {
-    fetchMovies(`${API_ENDPOINT}&s=${query}`);
-  }, [query]);
+    fetchMovies(`${API_ENDPOINT}&s=${urlParams}`);
+  }, [urlParams]);
 
   return;
 };
