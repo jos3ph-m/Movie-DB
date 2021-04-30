@@ -4,7 +4,7 @@ const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_MO
 const useFetch = (urlParams) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState({ show: false, msg: '' });
-  const [movies, setMovies] = useState([]);
+  const [data, setData] = useState(null);
 
   const fetchMovies = async (url) => {
     setIsLoading(true);
@@ -12,7 +12,7 @@ const useFetch = (urlParams) => {
       const response = await fetch(url);
       const data = await response.json();
       if (data.Response === 'True') {
-        setMovies(data.Search);
+        setDovies(data.Search);
         setError({ show: false, msg: '' });
       } else {
         setError({ show: true, msg: data.Error });
@@ -27,7 +27,7 @@ const useFetch = (urlParams) => {
     fetchMovies(`${API_ENDPOINT}${urlParams});
   }, [urlParams]);
 
-  return;
+  return{isLoading, error, };
 };
 
 export default useFetch;
