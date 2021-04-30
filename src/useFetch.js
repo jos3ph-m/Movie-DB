@@ -24,7 +24,7 @@ const useFetch = (urlParams) => {
   };
 
   useEffect(() => {
-    fetchMovies(`${API_ENDPOINT}&s=${urlParams}`);
+    fetchMovies(`${API_ENDPOINT}${urlParams});
   }, [urlParams]);
 
   return;
