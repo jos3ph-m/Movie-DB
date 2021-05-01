@@ -12,7 +12,7 @@ const useFetch = (urlParams) => {
       const response = await fetch(url);
       const data = await response.json();
       if (data.Response === 'True') {
-        // setData(data.Search);
+        setData(data.Search);
         setError({ show: false, msg: '' });
       } else {
         setError({ show: true, msg: data.Error });
